@@ -11,8 +11,9 @@ const root = ReactDOM.createRoot(
 );
 
 axios.interceptors.request.use((response)=>{
-  console.log(request);
+  // console.log(request);
   return request
+
   
 })
 
