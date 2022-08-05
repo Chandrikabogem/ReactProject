@@ -8,19 +8,21 @@ const HttpGet = () => {
     const [name,setName]:any=useState();
     const[email,setEmail]:any=useState();
 const [data,getData]:any=useState();
+const[dataE,setData]:any=useState()
+
 /* console.log(data) */
 
-useEffect(()=>{
-axios.get("https://jsonplaceholder.typicode.com/users")
-.then((response)=>{
-getData(response.data)
+// useEffect(()=>{
+// axios.get("https://jsonplaceholder.typicode.com/users")
+// .then((response)=>{
+// getData(response.data)
 
-/*  console.log(response.data)  */
-})
-.catch((error)=>{
-console.log(error.message)
-})
-},[])
+// /*  console.log(response.data)  */
+// })
+// .catch((error)=>{
+// console.log(error.message)
+// })
+// },[])
 
 
 const del=(id:any)=>{
@@ -62,6 +64,13 @@ const post=()=>{
     })
 }
 
+function get():any{
+  axios.get('https://jsonplaceholder.typicode.com/users')
+  .then((res)=>{
+    console.log(res);
+    getData(res.data)
+  })
+}
 
 
 
@@ -69,7 +78,7 @@ const post=()=>{
   return (
     <div className='app'>
 
-
+<button onClick={get}>Get</button>
 
             
    <h1>Table</h1>

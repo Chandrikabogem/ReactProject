@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
+import axios from 'axios';
+import { request } from 'http';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+axios.interceptors.request.use((response)=>{
+  console.log(request);
+  return request
+  
+})
+
 root.render(
   <React.StrictMode>
     <App />
