@@ -16,7 +16,7 @@ function Post() {
   function get():any{
     axios.get('https://jsonplaceholder.typicode.com/users')
     .then((res)=>{
-      console.log(res);
+    /*   console.log(res); */
       setData(res.data)
     })
   }
