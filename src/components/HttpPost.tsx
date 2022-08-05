@@ -18,7 +18,7 @@ function App() {
   function get():any{
     axios.get('https://jsonplaceholder.typicode.com/users')
     .then((res)=>{
-      console.log(res);
+      console.log(res.data);
       setData(res.data)
     })
   }
