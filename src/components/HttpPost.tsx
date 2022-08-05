@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
 import axios from 'axios';
 
-function App() {
+function HttpPost() {
 
   const[data,setData]:any=useState()
   const [inputData,setInputData]:any=useState()
@@ -43,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default HttpPost;
