@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HttpGet = () => {
     const [name,setName]:any=useState();
-    const[email,setEmail]:any=useState()
+    const[email,setEmail]:any=useState();
 const [data,getData]:any=useState();
 /* console.log(data) */
 
@@ -111,7 +111,7 @@ const post=()=>{
 <td><button onClick={()=>del(val.id)}>Delete</button>
 
     </td>
-    <td><button onClick={()=>put(val.id)}>Put</button></td>
+    <td><button onClick={()=>put(val.id)}>Update</button></td>
    
              
             </tr>
